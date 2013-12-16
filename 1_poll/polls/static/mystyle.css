@@ -1,0 +1,66 @@
+﻿body {
+	background: url(snowman.jpg) no-repeat; 
+	background-size: 100% 100%;
+	font-size: 1.9em;
+}
+
+h1 {  
+	color: blue;
+	font-size: 1.3em;
+}
+
+ul {
+	list-style-image: url(toy.png);
+	list-style-position: inside; 
+}
+
+li a {
+    color: blue;
+}
+
+a { 
+    text-decoration: none; 
+} 
+
+a:hover {
+	color: purple;
+}
+
+label {
+	color: indigo;
+}
+
+button {
+	border-radius: 20px;
+	background-image: url(snow.jpg);
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.25);
+	width: 200px;
+	height: 40px;
+	color: indigo;
+	font-size: 17px;
+	vertical-align: middle;
+	display: block;
+	cursor: pointer;
+	padding: 2px 5px;
+	margin: 20px 10px 20px 15px;
+}
+
+button:hover {
+  color: white; 
+}
+ 
+.col {
+	color: indigo;
+}
+
+.demo-placeholder {
+	width: 50%;
+	height: 50%;
+	font-size: 14px;
+	line-height: 1.2em;
+	margin: 0px auto;
+}
+
+#placeholder {
+	width: 550px;
+}

@@ -1,0 +1,16 @@
+﻿{% extends "polls/base.html" %}
+{% block content %}
+		<div class="demo-container">
+			<div id="placeholder" class="demo-placeholder"></div>
+
+<h1>{{ question.question_text }}</h1>
+
+<ul>
+{% for choice in question.choice_set.all %}
+    <li value="{{ choice.votes }}" question="{{ choice.choice_text }}">{{ choice.choice_text }} -- {{ choice.votes }} </li>
+{% endfor %}
+</ul>
+
+<a href="{% url 'detail' question.id %}">Проголосовать заново</a>
+
+{% endblock %}
