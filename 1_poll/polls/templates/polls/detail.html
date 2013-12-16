@@ -1,4 +1,5 @@
 ﻿{% extends "polls/base.html" %}
+{% block title %}{{ question.question_text }}{% endblock %}
 {% block content %}
 <h1>{{ question.question_text }}</h1>
 
