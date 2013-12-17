@@ -1,3 +1,4 @@
+# -*- coding: utf8 -*-
 from django.shortcuts import get_object_or_404, render
 from django.http import HttpResponseRedirect
 from django.core.urlresolvers import reverse
@@ -13,7 +14,7 @@ class IndexView(generic.ListView):
     context_object_name = 'latest_question_list'
 
     def get_queryset(self):
-        return Question.objects.filter(pub_date__lte=timezone.now()).order_by('-pub_date')[:5]
+        return Question.objects.all().order_by('-pub_date')
 
 
 class DetailView(generic.DetailView):
@@ -32,7 +33,7 @@ def vote(request, question_id):
     except (KeyError, Choice.DoesNotExist):
         return render(request, 'polls/detail.html', {
             'question': p,
-            'error_message': "You didn't select a choice.",
+            'error_message': "Не выбран ответ.",
         })
     else:
         selected_choice.votes += 1
