@@ -1,11 +1,11 @@
-п»ї{% extends "polls/base.html" %}
+{% extends "polls/base.html" %}
 {% block title %}{{ question.question_text }}{% endblock %}
 {% block content %}
 <h1>{{ question.question_text }}</h1>
 
 <ul>
 {% for choice in question.choice_set.all %}
-    <li value="{{ choice.votes }}" question="{{ choice.choice_text }}">{{ choice.choice_text }} -- {{ choice.votes }} </li>
+    <li class="col" value="{{ choice.votes }}" question="{{ choice.choice_text }}">{{ choice.choice_text }} -- {{ choice.votes }} </li>
 {% endfor %}
 </ul>
 
@@ -13,6 +13,6 @@
 	<div id="placeholder" class="demo-placeholder"></div>
 </div>
 
-<a href="{% url 'detail' question.id %}">РџСЂРѕРіРѕР»РѕСЃРѕРІР°С‚СЊ Р·Р°РЅРѕРІРѕ</a>
+<a href="{% url 'detail' question.id %}">Проголосовать заново</a>
 
 {% endblock %}
