@@ -8,7 +8,6 @@ from django.utils import timezone
 from polls.models import Choice, Question
 
 
-
 class IndexView(generic.ListView):
     template_name = 'polls/index.html'
     context_object_name = 'latest_question_list'
@@ -25,6 +24,7 @@ class DetailView(generic.DetailView):
 class ResultsView(generic.DetailView):
     model = Question
     template_name = 'polls/results.html'
+
 
 def vote(request, question_id):
     p = get_object_or_404(Question, pk=question_id)
