@@ -1,4 +1,4 @@
-{% extends "polls/base.html" %}
+п»ї{% extends "polls/base.html" %}
 {% block title %}{{ question.question_text }}{% endblock %}
 {% block content %}
 <h1>{{ question.question_text }}</h1>
@@ -13,6 +13,6 @@
 	<div id="placeholder" class="demo-placeholder"></div>
 </div>
 
-<a href="{% url 'detail' question.id %}">Проголосовать заново</a>
+<a href="{% url 'detail' question.id %}">РџСЂРѕРіРѕР»РѕСЃРѕРІР°С‚СЊ Р·Р°РЅРѕРІРѕ</a>
 
 {% endblock %}
